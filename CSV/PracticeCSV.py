@@ -35,7 +35,6 @@ for i in dateData:
             stepInterval[i[11:]] = int(dateData[i])
         else:
             stepInterval[i[11:]] += int(dateData[i])
-print(stepInterval)
 
 x = np.array(list(stepInterval.keys()))
 y = np.array(list(stepInterval.values()))
@@ -46,7 +45,7 @@ naCount = 0
 for i in dateData:
     if dateData[i] == "NA":
         naCount += 1
-print(naCount)
+print("Number of datas that were Not Available: ", naCount)
 
 newDateData = dateData
 
